@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Row, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import ContactForm from "./contactform/ContactForm";
 import Projects from "./Projects";
 import Skills from "./Skills";
 
@@ -43,6 +44,7 @@ export default function HeroSection() {
       </Container>
       <Skills />
       <Projects />
+      <ContactForm />
     </>
   );
 }
