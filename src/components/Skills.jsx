@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row, Image } from "react-bootstrap";
+import { Col, Row, Image } from "react-bootstrap";
 
 export default function Skills() {
 
@@ -58,10 +58,11 @@ export default function Skills() {
 
       return (
         <div>
+            <h2 style={{textAlign: "center", marginBottom: "10px"}}><strong>My skills</strong></h2>
           <Row className="d-flex flex-wrap justify-content-center align-items-center">
             {images.map((image, index) => (
               <Col xs={2} key={index} className="d-flex flex-column flex-wrap justify-content-center align-items-center">
-                <Image src={image.url} alt={image.alt} thumbnail fluid style={{ width: '80px', height: '80px' }} className="rounded-circle"/>
+                <Image src={image.url} alt={image.alt} thumbnail fluid style={{ width: '80px', height: '80px' }} roundedCircle/>
                 <h4>{image.caption}</h4>
               </Col>
             ))}

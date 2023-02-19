@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Row, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Projects from "./Projects";
 import Skills from "./Skills";
 
 export default function HeroSection() {
@@ -24,7 +25,7 @@ export default function HeroSection() {
         </Row>
         <Row className="my-5">
           <Col xs={12} md={4} className="d-flex justify-content-center">
-          <Image src={`${process.env.PUBLIC_URL}/images/photo1.jpg`} alt="profileImg" className="rounded-circle" fluid />
+          <Image src={`${process.env.PUBLIC_URL}/images/photo1.jpg`} alt="profileImg" rounded fluid />
           </Col>
           <Col xs={12} md={8}>
             <h3>About Me</h3>
@@ -41,6 +42,7 @@ export default function HeroSection() {
         </Row>
       </Container>
       <Skills />
+      <Projects />
     </>
   );
 }
