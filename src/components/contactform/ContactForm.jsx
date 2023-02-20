@@ -2,7 +2,7 @@ import React from 'react'
 import './ContactForm.css'
 
 const ContactForm = () => (
-  <form className="contact-form" method="POST" action="/contact">
+  <form className="contact-form" method="POST" action="/contact" id='contact'>
     <div className="form-field">
       <label htmlFor="name">
         <div className="label-content">Name:</div>

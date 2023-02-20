@@ -10,13 +10,13 @@ export default function NavBar() {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link>
-            <Link to="/portfolio">My projects</Link>
+            <Link to="/">Home</Link>
           </Nav.Link>
           <Nav.Link>
             <Link to="/certificates">Certificates</Link>
           </Nav.Link>
           <Nav.Link>
-            <Link to="/contact">Contact me!</Link>
+            <Link to="/#contact">Contact me!</Link>
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>

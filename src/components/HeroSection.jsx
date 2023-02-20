@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Col, Container, Row, Image } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from 'react-router-dom';
 import ContactForm from "./contactform/ContactForm";
 import Projects from "./Projects";
 import Skills from "./Skills";
@@ -31,13 +31,10 @@ export default function HeroSection() {
           <Col xs={12} md={8}>
             <h3>About Me</h3>
             <p>
-            As a full-stack web developer with a strong background in coordination and customer service, I bring a unique blend of technical and interpersonal skills to the table. My expertise in HTML, CSS, JavaScript, and frameworks such as React, Node.js, and Express.js, allow me to efficiently build, and deploy dynamic web applications. My experience with databases like MongoDB and PostgreSQL, as well as my familiarity with version control systems like Git, further support my ability to develop and manage high-quality, scalable web solutions. Additionally, my years of experience working with people in various customer-facing roles have honed my communication skills, potentially making me a valuable team player who is able to effectively collaborate with both clients and colleagues.Feel free to check my projects, and there's a feedback form of the bottom - let's get in touch!
+            As a full-stack web developer with a strong background in coordination and customer service, I bring a unique blend of technical and interpersonal skills to the table. My expertise in HTML, CSS, JavaScript, and frameworks such as React, Node.js, and Express.js, allow me to efficiently build, and deploy dynamic web applications. My experience with databases like MongoDB and PostgreSQL, as well as my familiarity with version control systems like Git, further support my ability to develop and manage high-quality, scalable web solutions. Additionally, my years of experience working with people in various customer-facing roles have honed my communication skills, potentially making me a valuable team player who is able to effectively collaborate with both clients and colleagues.Feel free to check my projects, and there's a feedback form on the bottom - let's get in touch!
             </p>
-            <Link to={"/portfolio"}>
-              <Button className="mr-2">See my Work</Button>
-            </Link>
-            <a href="/CV.pdf">
-              <Button>CV</Button>
+            <a href="/#contact">
+              <Button>Contact me!</Button>
             </a>
           </Col>
         </Row>
