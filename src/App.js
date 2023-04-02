@@ -1,19 +1,26 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import HeroSection from "./components/HeroSection";
+import React from "react";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Testimonials from "./components/Testimonials";
 import Certificates from "./components/certificates/Certificates";
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-      <Route path="/" element={<HeroSection />} />
-      <Route path="/certificates" element={<Certificates/>} />
-      </Routes>
-    </BrowserRouter>
+    <main className="text-gray-400 bg-gray-900 body-font">
+      <Navbar />
+      <About />
+      <Projects />
+      <Skills />
+      <Testimonials />
+      <Certificates />
+      <Contact />
+      </main>
   );
 }
 
