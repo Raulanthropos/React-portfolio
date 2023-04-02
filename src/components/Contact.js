@@ -19,10 +19,10 @@ export default function Contact() {
       };
 
       const response = await emailjs.send(
-        "service_o74ldfp",
-        "template_b4dwymd",
+        "service_x4owk7q",
+        "template_ceejems",
         templateParams,
-        "VOqNF9CcpikDzdcQj"
+        "GoygN0xGfGhvIxjY0"
       );
 
       if (response.status === 200) {
@@ -99,10 +99,10 @@ export default function Contact() {
       </div>
 
       <div className="flex flex-col items-center mt-10">
-        <h3 className="text-lg font-medium mb-3">Follow me or contact me on:</h3>
+        <h3 className="text-lg font-medium mb-3">Contact me at:</h3>
           <div className="flex">
             <a
-              href="https://www.github.com/markotuya0"
+              href="https://www.github.com/Raulanthropos"
               target="_blank"
               rel="noopener noreferrer"
               className="text-3xl mx-3"
@@ -110,15 +110,7 @@ export default function Contact() {
               <i className="fab fa-github"></i>
             </a>
             <a
-              href="https://www.twitter.com/mark__anthonny"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-3xl mx-3"
-            >
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/mark-otuya"
+              href="https://www.linkedin.com/in/ioannis-psychias/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-3xl mx-3"
@@ -126,15 +118,7 @@ export default function Contact() {
               <i className="fab fa-linkedin"></i>
             </a>
             <a
-              href="https://wa.me/+2348117644774"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-3xl mx-3"
-            >
-              <i className="fab fa-whatsapp"></i>
-            </a>
-            <a
-              href="mailto:markotuya0@gmail.com"
+              href="mailto:ipsichias@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-3xl mx-3"

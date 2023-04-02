@@ -6,10 +6,10 @@ return (
 <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
 <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
 <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-Hi, I'm Mark Otuya!
+Hi, I'm Ioannis Psychias!
 </h1>
 <p className="mb-8 leading-relaxed">
-I'm a full stack developer with a passion for building innovative and user-friendly web applications. With over 5 years of experience in the industry, I've honed my skills in both front-end and back-end development, as well as in agile methodologies and project management. My strong understanding of software architecture and best practices allows me to deliver high-quality solutions that meet business needs and exceed user expectations. When I'm not coding, you can find me exploring out-door activities, listening to music  or Playing football.
+I have worked in management and administrative positions for more than five years, including 1.5 years in the telecoms industry. I developed a love for coding and started learning web and mobile development during the COVID-19 pandemic. I am now focusing on full-stack web development utilizing JavaScript, React, Redux, TypeScript, Node.js, and Express.js. I'm eager to start a career in web development since I'm a natural problem-solver and tech enthusiast who can use my abilities to create dynamic and effective websites and online applications. When I'm not coding, you can often find me with a wagging tail by my side.
 </p>
 <div className="flex justify-center">
 <a
@@ -28,7 +28,7 @@ See My Past Work
 <img
          className="object-cover object-center rounded"
          alt="hero"
-         src="./coding.svg"
+         src="https://raw.githubusercontent.com/Raulanthropos/React-portolio/better-branch/public/images/photo1.jpg?token=GHSAT0AAAAAACAYVHSMIWBUZK2HVPJI34UAZBJ2ISA"
        />
 </div>
 </div>

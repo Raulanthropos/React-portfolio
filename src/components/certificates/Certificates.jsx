@@ -33,7 +33,7 @@ const Certificates = () => {
   };
 
   return (
-    <Slider {...settings}>
+    <Slider id="certificates" {...settings}>
       {certificates.map((certificate, index) => (
         <div key={index}>
           <h3>{certificate.title}</h3>
