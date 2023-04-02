@@ -13,7 +13,7 @@ export const projects = [
     description:
       "This is a job search engine, for developers, utilising an external API",
     image: "https://user-images.githubusercontent.com/77921037/211097118-1e13f766-9aee-4a3d-8ba3-1f840af2350c.png",
-    link: "https://github.com/Raulanthropos/Capstone-FE",
+    link: "https://search-engine-w-reducers-and-action.vercel.app/",
   },
 ];
 
