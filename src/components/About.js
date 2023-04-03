@@ -13,9 +13,9 @@ I have worked in management and administrative positions for more than five year
 </p>
 <div className="flex justify-center">
 <a
-           href="#Contact"
+           href="#contact"
            className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
-Work With Me
+Contact Me
 </a>
 <a
            href="#projects"
@@ -28,7 +28,7 @@ See My Past Work
 <img
          className="object-cover object-center rounded"
          alt="hero"
-         src="https://raw.githubusercontent.com/Raulanthropos/React-portolio/better-branch/public/images/photo1.jpg?token=GHSAT0AAAAAACAYVHSMIWBUZK2HVPJI34UAZBJ2ISA"
+         src="/images/meme.png"
        />
 </div>
 </div>
