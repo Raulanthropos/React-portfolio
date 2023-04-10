@@ -1,0 +1,7 @@
+@media screen and (max-width: 767px) {
+    .verticalwhenmobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

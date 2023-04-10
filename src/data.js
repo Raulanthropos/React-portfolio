@@ -4,8 +4,9 @@ export const projects = [
     subtitle: "React, Redux, Node, Express, MongoDB",
     description:
     "The dog adoption platform connects potential adopters with the dog shelter. Users can create an account and search through a database of dogs using filters such as breed, age, and weight. For the shelter's admin user, the platform allows them to manage dogs and create profiles for each dog, including photos and descriptions, and receive the adoption requests.",
-    image: "https://user-images.githubusercontent.com/77921037/211097118-1e13f766-9aee-4a3d-8ba3-1f840af2350c.png",
-    link: "https://github.com/Raulanthropos/Capstone-FE",
+    image: "https://res.cloudinary.com/dlhs6o8ga/image/upload/v1681124765/woo-paws_gnjzpc.png",
+    github: "https://github.com/Raulanthropos/Capstone-FE",
+    link: "https://woof-paws.vercel.app/",
   },
   {
     title: "Job search",
@@ -13,6 +14,7 @@ export const projects = [
     description:
       "This is a job search engine, for developers, utilising an external API",
     image: "https://user-images.githubusercontent.com/77921037/211097118-1e13f766-9aee-4a3d-8ba3-1f840af2350c.png",
+    github: "https://github.com/Raulanthropos/search-engine-w-reducers-and-action",
     link: "https://search-engine-w-reducers-and-action.vercel.app/",
   },
 ];

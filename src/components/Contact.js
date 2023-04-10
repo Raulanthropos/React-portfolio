@@ -99,7 +99,7 @@ export default function Contact() {
       </div>
 
       <div className="flex flex-col items-center mt-10">
-        <h3 className="text-lg font-medium mb-3">Contact me at:</h3>
+        <h3 className="text-lg font-medium mb-3">You can also find me at:</h3>
           <div className="flex">
             <a
               href="https://www.github.com/Raulanthropos"
