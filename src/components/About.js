@@ -28,7 +28,7 @@ See My Past Work
 <img
          className="object-cover object-center rounded"
          alt="hero"
-         src="/images/meme.png"
+         src="https://res.cloudinary.com/dlhs6o8ga/image/upload/v1681146653/meme_pcnark.png"
        />
 </div>
 </div>
