@@ -26,7 +26,7 @@ export default function HeroSection() {
         </Row>
         <Row className="my-5">
           <Col xs={12} md={4} className="d-flex justify-content-center">
-          <Image src={`${process.env.PUBLIC_URL}/images/photo1.jpg`} alt="profileImg" rounded fluid />
+          <Image src="https://res.cloudinary.com/dlhs6o8ga/image/upload/v1681146653/meme_pcnark.png" alt="profileImg" rounded fluid />
           </Col>
           <Col xs={12} md={8}>
             <h3>About Me</h3>
