@@ -11,7 +11,7 @@ const certificates = [
   { title: 'CSS/ FLEXBOX/ Responsive/ Mobile-First', image: `${process.env.PUBLIC_URL}/images/certificates/module-4.svg` },
   { title: 'Bootstrap/ SASS/ Animations', image: `${process.env.PUBLIC_URL}/images/certificates/module-5.svg` },
   { title: 'AJAX/ HTTP/ ES6/ Promises/ async/await', image: `${process.env.PUBLIC_URL}/images/certificates/module-6.svg` },
-  { title: 'React/ Components/ SPAs/ State Management/ Component LifeCycle', image: `${process.env.PUBLIC_URL}/images/certificates/module-7.jpg` },
+  { title: 'React/ Components/ SPAs/ State Management/ Component LifeCycle', image: `${process.env.PUBLIC_URL}/images/certificates/module-7.svg` },
   { title: 'Software Engineering/ State Elevation/ React Router/ Component Updates/ React Hooks', image: `${process.env.PUBLIC_URL}/images/certificates/module-8.svg` },
   { title: 'REDUX/ Pure Functions/ State Management/ Reducers/ Actions/ Storage/ TypeScript', image: `${process.env.PUBLIC_URL}/images/certificates/module-9.svg` },
   { title: 'NodeJS/ ExpressJS/ Middlewares/ File System', image: `${process.env.PUBLIC_URL}/images/certificates/module-2-1.svg` },
