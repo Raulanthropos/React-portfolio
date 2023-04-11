@@ -56,7 +56,7 @@ export default function Projects() {
             Apps I've Built
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            I'm a creative developer who loves to work on excellent and
+            I'm a creative developer who loves to work on easy to use and
             appealing Web-Applications, with a passion for creating and
             consuming APIs... Below you may find some of my latest
             projects.
@@ -66,7 +66,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col w-64 mx-4 my-4 bg-white rounded-lg shadow-lg"
+              className="flex flex-col w-64 mx-4 my-4 bg-gray rounded-lg shadow-lg snake-border"
             >
               <img
                 src={project.image}
@@ -81,12 +81,13 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500 hover:text-blue-700 font-semibold mb-2"
+                  className="text-blue-500 hover:text-blue-700 font-semibold mb-2 no-underline"
                 >
                   Source
                 </a>
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">
                   <a
+                  className="text-white no-underline"
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
