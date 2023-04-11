@@ -23,6 +23,7 @@ export const skills = [
   "HTML5",
   "CSS3",
   "BOOTSTRAP",
+  "TAILWIND",
   "JAVASCRIPT",
   "REACT",
   "REDUX",

@@ -25,11 +25,15 @@ See My Past Work
 </div>
 </div>
 <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-<img
-         className="object-cover object-center rounded"
-         alt="hero"
-         src="https://res.cloudinary.com/dlhs6o8ga/image/upload/v1681146653/meme_pcnark.png"
-       />
+<div class="w-64 h-64 overflow-hidden">
+  <img
+    class="object-cover object-center w-full h-full"
+    alt="hero"
+    src="https://res.cloudinary.com/dlhs6o8ga/image/upload/v1681207526/meme-removebg-preview1_tgnhsn.png"
+    style={{borderRadius: "50%"}}
+  />
+</div>
+
 </div>
 </div>
 </section>

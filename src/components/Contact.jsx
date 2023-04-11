@@ -42,13 +42,14 @@ export default function Contact() {
     <section id="contact">
       <div className="flex flex-col items-center mt-10">
         <h2 className="text-3xl font-medium mb-5">Get in Touch</h2>
-        <form onSubmit={handleSubmit} className="max-w-md w-full bg-gray-100 rounded-lg p-6">
+        <form onSubmit={handleSubmit} className="max-w-3xl w-full bg-gray-100 rounded-lg p-6">
           <div className="mb-4">
-            <label htmlFor="name" className="text-gray-600">Your Name</label>
+            <label htmlFor="name" className="text-black font-bold">Your Name</label>
             <input
               type="text"
               name="name"
               value={name}
+              placeholder="Name..."
               onChange={(e) => setName(e.target.value)}
               className="block w-full rounded-lg border-gray-300 focus:border-green-500 focus:ring-green-500"
               required
@@ -56,11 +57,12 @@ export default function Contact() {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="email" placeholder="Email id" className="text-gray-600">Your Email</label>
+            <label htmlFor="email" placeholder="Email id" className="text-black font-bold">Your Email</label>
             <input
               type="email"
               name="email"
               value={email}
+              placeholder="Email..."
               onChange={(e) => setEmail(e.target.value)}
               className="block w-full rounded-lg border-gray-300 focus:border-green-500 focus:ring-green-500"
               required
@@ -68,10 +70,11 @@ export default function Contact() {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="message" className="text-gray-600">Your Message</label>
+            <label htmlFor="message" className="text-black font-bold">Your Message</label>
             <textarea
               name="message"
               value={message}
+              placeholder="Message..."
               onChange={(e) => setMessage(e.target.value)}
               className="block w-full rounded-lg border-gray-300 focus:border-green-500 focus:ring-green-500"
               rows="6"
