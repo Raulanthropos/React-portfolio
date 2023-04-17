@@ -9,13 +9,13 @@ export const projects = [
     link: "https://woof-paws.vercel.app/",
   },
   {
-    title: "Job search",
-    subtitle: "React, Redux",
+    title: "Comfy Blog",
+    subtitle: "React, Redux, Node, Express, MongoDB",
     description:
-      "This is a job search engine, for developers, utilising an external API",
-    image: "https://user-images.githubusercontent.com/77921037/211097118-1e13f766-9aee-4a3d-8ba3-1f840af2350c.png",
-    github: "https://github.com/Raulanthropos/search-engine-w-reducers-and-action",
-    link: "https://search-engine-w-reducers-and-action.vercel.app/",
+      "This full-stack app, is a platform designed to raise awareness about social issues. Users can sign up to read all articles, post their own content, and edit their settings if needed. The app provides a user-friendly interface that allows for easy navigation and interaction.",
+    image: "https://res.cloudinary.com/dlhs6o8ga/image/upload/v1681716503/rjs_ijsr3d.png",
+    github: "https://github.com/Raulanthropos/blog-hosted",
+    link: "https://strive-blog-hosted.vercel.app",
   },
 ];
 
