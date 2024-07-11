@@ -1,12 +1,12 @@
 export const projects = [
   {
     title: "Woof Paws",
-    subtitle: "React, Redux, Node, Express, MongoDB",
+    subtitle: "React, MUI, Redux, Zustand, Node, Express, MongoDB",
     description:
-    "The dog adoption platform connects potential adopters with the dog shelter. Users can create an account and search through a database of dogs using filters such as breed, age, and weight. For the shelter's admin user, the platform allows them to manage dogs and create profiles for each dog, including photos and descriptions, and receive the adoption requests.",
-    image: "https://res.cloudinary.com/dlhs6o8ga/image/upload/v1681124765/woo-paws_gnjzpc.png",
-    github: "https://github.com/Raulanthropos/Capstone-FE",
-    link: "https://woof-paws.vercel.app/",
+    "A mock e-shop application built using React, Redux, Zustand, and Material-UI (MUI). The application is fully responsive and provides functionalities such as user registration, login, product viewing, adding reviews, and managing a shopping cart.",
+    image: "https://res.cloudinary.com/dlhs6o8ga/image/upload/v1720723296/eshop_fp8jhc.png",
+    github: "https://github.com/Raulanthropos/Marketplace",
+    link: "https://marketplace-omega-tawny.vercel.app/",
   },
   {
     title: "Comfy Blog",
@@ -24,12 +24,16 @@ export const skills = [
   "CSS3",
   "BOOTSTRAP",
   "TAILWIND",
+  "MUI",
   "JAVASCRIPT",
   "REACT",
   "REDUX",
+  "ZUSTAND",
   "NODEJS",
   "EXPRESSJS",
   "MONGODB",
   "SQL-POSTGRESQL",
-  "GIT"
+  "GIT",
+  "BITBUCKET",
+  "JIRA",
 ];
