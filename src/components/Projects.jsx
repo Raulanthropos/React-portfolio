@@ -65,7 +65,7 @@ export default function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white no-underline"
+                    className="text-blue-500 hover:text-blue-700 font-semibold mb-2 no-underline"
                   >
                     Live Demo
                   </a>
