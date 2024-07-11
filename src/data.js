@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: "Woof Paws",
+    title: "Marketplace",
     subtitle: "React, MUI, Redux, Zustand, Node, Express, MongoDB",
     description:
     "A mock e-shop application built using React, Redux, Zustand, and Material-UI (MUI). The application is fully responsive and provides functionalities such as user registration, login, product viewing, adding reviews, and managing a shopping cart.",

@@ -1,3 +1,9 @@
+:root {
+  --scrollbar-bg: #f1f1f1;
+  --scrollbar-thumb: #888;
+  --scrollbar-thumb-hover: #555;
+}
+
 .snake-border {
   border: 5px groove transparent;
   position: relative;
@@ -7,10 +13,10 @@
 .snake-border:before {
   content: "";
   position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
   border: 5px groove transparent;
   border-radius: 5%;
   animation: snake 2s infinite;
@@ -50,6 +56,48 @@
   }
 }
 
+/* Projects.css */
+
+.card-container {
+  height: 400px; /* Set a fixed height for all cards */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.card-content {
+  height: 100%; /* Fill the height of the card container */
+  overflow-y: scroll;
+  scrollbar-width: none; /* options: auto, thin, none */
+}
+
+.card-description {
+  flex: 1; /* Allow description to take available space */
+  overflow: hidden; /* Hide overflowing content */
+  transition: max-height 0.3s ease; /* Smooth transition */
+}
+
+.card-description.expanded {
+  max-height: 400px; /* Adjust as needed for the expanded content */
+  overflow: auto;
+}
+
+.card-footer {
+  flex-shrink: 0; /* Ensure footer is not shrunk */
+}
+
+.card-image {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
 
 
 @media screen and (max-width: 767px) {
