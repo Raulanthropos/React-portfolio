@@ -56,7 +56,7 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500 hover:text-blue-700 font-semibold mb-2 no-underline"
+                  className="text-white no-underline"
                 >
                   Source
                 </a>
@@ -65,7 +65,7 @@ export default function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-500 hover:text-blue-700 font-semibold mb-2 no-underline"
+                    className="text-white no-underline"
                   >
                     Live Demo
                   </a>
