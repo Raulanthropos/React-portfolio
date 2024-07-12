@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -7,10 +7,12 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    setIsLoading(true);
     try {
       const templateParams = {
         name,
@@ -26,11 +28,13 @@ export default function Contact() {
       );
 
       if (response.status === 200) {
+        setIsLoading(false);
         setIsSuccess(true);
         setName("");
         setEmail("");
         setMessage("");
       } else {
+        setIsLoading(false);
         setIsError(true);
       }
     } catch (error) {
@@ -42,9 +46,14 @@ export default function Contact() {
     <section id="contact">
       <div className="flex flex-col items-center mt-10">
         <h2 className="text-3xl font-medium mb-5">Get in Touch</h2>
-        <form onSubmit={handleSubmit} className="max-w-3xl w-full bg-gray-100 rounded-lg p-6">
+        <form
+          onSubmit={handleSubmit}
+          className="max-w-3xl w-full bg-gray-100 rounded-lg p-6"
+        >
           <div className="mb-4">
-            <label htmlFor="name" className="text-black font-bold">Your Name</label>
+            <label htmlFor="name" className="text-black font-bold">
+              Your Name
+            </label>
             <input
               type="text"
               name="name"
@@ -57,7 +66,13 @@ export default function Contact() {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="email" placeholder="Email id" className="text-black font-bold">Your Email</label>
+            <label
+              htmlFor="email"
+              placeholder="Email id"
+              className="text-black font-bold"
+            >
+              Your Email
+            </label>
             <input
               type="email"
               name="email"
@@ -70,7 +85,9 @@ export default function Contact() {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="message" className="text-black font-bold">Your Message</label>
+            <label htmlFor="message" className="text-black font-bold">
+              Your Message
+            </label>
             <textarea
               name="message"
               value={message}
@@ -90,46 +107,53 @@ export default function Contact() {
               Send Message
             </button>
           </div>
-
+          {isLoading && (
+            <p className="text-green-600 mt-4">Sending message...</p>
+          )}
           {isSuccess && (
-            <p className="text-green-600 mt-4">Thank you for your message! I'll get back to you soon.</p>
+            <p className="text-green-600 mt-4">
+              Thank you for your message! I'll get back to you soon.
+            </p>
           )}
-
-          {isError && (
-            <p className="text-red-600 mt-4">Oops! Something went wrong. Please try again later.</p>
-          )}
+            {
+              isError && (
+                <p className="text-red-600 mt-4">
+                  Oops! Something went wrong. Please try again later.
+                </p>
+              )
+            }
         </form>
       </div>
 
       <div className="flex flex-col items-center mt-10">
         <h3 className="text-lg font-medium mb-3">You can also find me at:</h3>
-          <div className="flex">
-            <a
-              href="https://www.github.com/Raulanthropos"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-3xl mx-3"
-            >
-              <i className="fab fa-github"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/ioannis-psychias/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-3xl mx-3"
-            >
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a
-              href="mailto:ipsichias@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-3xl mx-3"
-            >
-              <i className="far fa-envelope"></i>
-            </a>
-          </div>
+        <div className="flex">
+          <a
+            href="https://www.github.com/Raulanthropos"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl mx-3"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ioannis-psychias/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl mx-3"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="mailto:ipsichias@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl mx-3"
+          >
+            <i className="far fa-envelope"></i>
+          </a>
         </div>
+      </div>
     </section>
   );
 }
