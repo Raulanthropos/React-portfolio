@@ -56,54 +56,73 @@
   }
 }
 
-/* Projects.css */
-
 .card-container {
-  height: 400px; /* Set a fixed height for all cards */
+  height: 400px; /* Fixed height for the card */
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin: 0 auto;
 }
 
 .card-content {
-  height: 100%; /* Fill the height of the card container */
-  overflow-y: scroll;
-  scrollbar-width: none; /* options: auto, thin, none */
+  flex: 1; /* Take available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .card-description {
-  flex: 1; /* Allow description to take available space */
-  overflow: hidden; /* Hide overflowing content */
+  max-height: 100px; /* Fixed height for the description */
   transition: max-height 0.3s ease; /* Smooth transition */
 }
 
 .card-description.expanded {
-  max-height: 400px; /* Adjust as needed for the expanded content */
-  overflow: auto;
+  max-height: 200px; /* Expanded height */
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.card-description::-webkit-scrollbar {
+  width: 8px; /* Width of the entire scrollbar */
+}
+
+.card-description::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg); /* Color of the track */
+}
+
+.card-description::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb); /* Color of the thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.card-description::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover); /* Color of the thumb on hover */
 }
 
 .card-footer {
-  flex-shrink: 0; /* Ensure footer is not shrunk */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 16px;
 }
+
+/* .card-footer a,
+.card-footer button {
+  margin-top: 8px;
+} */
 
 .card-image {
-  width: 90%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 150px;
   object-fit: cover;
+  margin-bottom: 16px;
 }
 
-
 @media screen and (max-width: 767px) {
-    .verticalwhenmobile {
-      flex-direction: column;
-      align-items: center;
-    }
+  .verticalwhenmobile {
+    flex-direction: column;
+    align-items: center;
   }
-  
+}

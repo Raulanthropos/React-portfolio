@@ -1,5 +1,5 @@
-import { CodeIcon } from "@heroicons/react/solid";
 import React, { useState } from "react";
+import { CodeIcon } from "@heroicons/react/solid";
 import { projects } from "../data";
 import "./Projects.css";
 
@@ -37,11 +37,15 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt="Project Thumbnail"
-                className="object-cover object-center w-full h-48 rounded-t-lg mt-2 card-image"
+                className="object-cover object-center w-full h-48 rounded-t-lg card-image"
               />
-              <div className="p-4 space-x-2 card-content">
+              <div className="card-content">
                 <h2 className="font-bold text-lg mb-1">{project.title}</h2>
-                <p className="text-sm mb-2 card-description card-description.expanded">
+                <div
+                  className={`text-sm mb-2 card-description ${
+                    expandedDescriptions[index] ? "expanded" : ""
+                  }`}
+                >
                   {expandedDescriptions[index]
                     ? project.description
                     : `${project.description.substring(0, 80)}...`}
@@ -51,25 +55,37 @@ export default function Projects() {
                   >
                     {expandedDescriptions[index] ? "See Less" : "See More"}
                   </button>
-                </p>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white no-underline"
-                >
-                  Source
-                </a>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">
-                  <a
-                    href={project.link}
+                </div>
+                <div className="card-footer">
+                  {/* <a
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white no-underline"
+                    className="text-blue-500 hover:text-blue-700 font-semibold mb-2 no-underline"
                   >
-                    Live Demo
-                  </a>
-                </button>
+                    Source
+                  </a> */}
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white no-underline"
+                    >
+                      Source
+                    </a>
+                  </button>
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white no-underline"
+                    >
+                      Live Demo
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
           ))}
