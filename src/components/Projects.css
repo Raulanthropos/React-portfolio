@@ -62,6 +62,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
 }
 
@@ -108,16 +110,10 @@
   margin-bottom: 16px;
 }
 
-/* .card-footer a,
-.card-footer button {
-  margin-top: 8px;
-} */
-
 .card-image {
-  width: 100%;
+  width: 93%;
   height: 150px;
   object-fit: cover;
-  margin-bottom: 16px;
 }
 
 @media screen and (max-width: 767px) {

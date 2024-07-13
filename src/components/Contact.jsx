@@ -43,7 +43,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact">
+    <section id="contact" className="items-center px-3">
       <div className="flex flex-col items-center mt-10">
         <h2 className="text-3xl font-medium mb-5">Get in Touch</h2>
         <form
@@ -127,7 +127,7 @@ export default function Contact() {
 
       <div className="flex flex-col items-center mt-10">
         <h3 className="text-lg font-medium mb-3">You can also find me at:</h3>
-        <div className="flex">
+        <div className="flex mb-5">
           <a
             href="https://www.github.com/Raulanthropos"
             target="_blank"

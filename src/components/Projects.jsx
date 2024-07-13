@@ -37,7 +37,7 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt="Project Thumbnail"
-                className="object-cover object-center w-full h-48 rounded-t-lg card-image"
+                className="object-cover object-center w-full h-48 rounded-t-lg card-image mt-2 overflow-hidden"
               />
               <div className="card-content">
                 <h2 className="font-bold text-lg mb-1">{project.title}</h2>
@@ -48,7 +48,7 @@ export default function Projects() {
                 >
                   {expandedDescriptions[index]
                     ? project.description
-                    : `${project.description.substring(0, 80)}...`}
+                    : `${project.description.substring(0, 100)}...`}
                   <button
                     onClick={() => toggleDescription(index)}
                     className="text-blue-500 hover:text-blue-700 font-semibold no-underline"
@@ -57,14 +57,6 @@ export default function Projects() {
                   </button>
                 </div>
                 <div className="card-footer">
-                  {/* <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500 hover:text-blue-700 font-semibold mb-2 no-underline"
-                  >
-                    Source
-                  </a> */}
                   <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">
                     <a
                       href={project.github}

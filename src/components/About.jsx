@@ -11,7 +11,7 @@ export default function About() {
           <p className="mb-8 leading-relaxed">
             I developed a love for coding and started learning web and mobile
             development during the COVID-19 pandemic. I am now focusing on
-            full-stack web development utilizing JavaScript, React, MUI, Redux,
+            fullstack web development utilizing JavaScript, React, MUI, Redux,
             TypeScript, Node.js, and Express.js. When I'm not coding, you can
             often find me with a wagging tail by my side.
           </p>
@@ -35,7 +35,7 @@ export default function About() {
             <img
               className="object-cover object-center w-full h-full"
               alt="hero"
-              src="https://res.cloudinary.com/dlhs6o8ga/image/upload/v1681207526/meme-removebg-preview1_tgnhsn.png"
+              src="https://res.cloudinary.com/dlhs6o8ga/image/upload/v1720848432/Raul_vil6oq.jpg"
               style={{ borderRadius: "50%" }}
             />
           </div>
