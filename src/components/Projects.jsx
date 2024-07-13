@@ -25,7 +25,7 @@ export default function Projects() {
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
             I'm a creative developer who loves to work on easy to use and
             appealing Web-Applications, with a passion for creating and
-            consuming APIs... Below you may find some of my latest projects.
+            consuming APIs. Below you may find some of my latest projects.
           </p>
         </div>
         <div className="flex flex-row justify-center items-center flex-wrap verticalwhenmobile">
