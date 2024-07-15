@@ -24,7 +24,7 @@ export const skills = [
   "EXPRESSJS",
   "MONGODB",
   "SQL-POSTGRESQL",
-  "GIT",
+  "GITHUB",
   "BITBUCKET",
   "JIRA",
 ];
