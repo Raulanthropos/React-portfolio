@@ -111,9 +111,11 @@
 }
 
 .card-image {
-  width: 93%;
-  height: 150px;
+  width: 94%;
+  height: 120px;
+  padding-left: 2px;
   object-fit: cover;
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 767px) {

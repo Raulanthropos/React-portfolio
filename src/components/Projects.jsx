@@ -37,12 +37,12 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt="Project Thumbnail"
-                className="object-cover object-center w-full h-48 rounded-t-lg card-image mt-2 overflow-hidden"
+                className="object-cover object-center w-full h-48 rounded-t-lg card-image overflow-hidden"
               />
               <div className="card-content">
                 <h2 className="font-bold text-lg mb-1">{project.title}</h2>
                 <div
-                  className={`text-sm mb-2 card-description ${
+                  className={`text-sm mb-2 px-2 card-description ${
                     expandedDescriptions[index] ? "expanded" : ""
                   }`}
                 >
