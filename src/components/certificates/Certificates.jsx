@@ -39,7 +39,7 @@ const Certificates = () => {
       {certificates.map((certificate, index) => (
         <div key={index} className='text-center'>
           <h3 className="inline-block">{certificate.title}</h3>
-          <img className='slider-image' src={certificate.image} alt={certificate.title} />
+          <img className='slider-image mt-2' src={certificate.image} alt={certificate.title} />
         </div>
       ))}
     </Slider>
