@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <header className="bg-gray-800 sticky top-0 z-10">
   <div className="container mx-auto flex flex-col md:flex-row items-center justify-between p-3">
-    <a href="#about" className="ml-3 text-xl" style={{marginBlock: "auto"}}>
+    <a href="#about" className="text-xl" style={{marginBlock: "auto"}}>
       IOANNIS PSYCHIAS
     </a>
     <div className="flex flex-col md:flex-row items-center justify-center md:mt-0">
