@@ -30,13 +30,13 @@ export default function Navbar() {
         </Tippy>
         <div className="flex flex-col md:flex-row items-center justify-center md:mt-0">
           <nav className="md:mr-5 flex flex-col md:flex-row items-center text-base">
-            <a href="#projects" className="mr-3 md:mr-5 hover:text-blue hover:bg-gray-700">
+            <a href="#projects" className="md:mr-5 hover:text-blue hover:bg-gray-700">
               Projects
             </a>
-            <a href="#skills" className="mr-3 md:mr-5 hover:text-blue hover:bg-gray-700">
+            <a href="#skills" className="md:mr-5 hover:text-blue hover:bg-gray-700">
               Skills
             </a>
-            <a href="#certificates" className="mr-3 md:mr-5 hover:text-blue hover:bg-gray-700">
+            <a href="#certificates" className="md:mr-5 hover:text-blue hover:bg-gray-700">
               Certificates
             </a>
           </nav>
