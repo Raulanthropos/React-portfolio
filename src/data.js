@@ -9,6 +9,16 @@ export const projects = [
     github: "https://github.com/Raulanthropos/Marketplace",
     link: "https://marketplace-omega-tawny.vercel.app/",
   },
+  {
+    title: "Json-CSV-Converter",
+    subtitle: "React, Node, Express, MongoDB",
+    description:
+      "This project is a simple web application designed to upload a JSON file, process it to strip out HTML tags, and convert it into a CSV file. It is built specifically for a particular use case involving a specific object structure.",
+    image:
+      "https://res.cloudinary.com/dlhs6o8ga/image/upload/v1722787914/snapshot_eb2mcb.jpg",
+    github: "https://github.com/Raulanthropos/json-csv",
+    link: "https://json-csv-two.vercel.app/",
+  },
 ];
 
 export const skills = [
