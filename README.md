@@ -8,7 +8,7 @@ This is the repository for my personal portfolio website, showcasing my projects
 - **Responsive Design**: Optimized for various devices and screen sizes to ensure a seamless user experience.
 - **Dynamic Project Showcase**: Displays my latest projects with detailed descriptions and live demos.
 - **Skill Highlights**: Summarizes my technical skills and proficiencies.
-- **Certificates Section**: Highlights my professional certifications and achievements.
+- **Certificates**: Highlights my professional certifications and achievements.
 - **Contact Form**: Allows visitors to get in touch with me directly through the website.
 
 ## Technologies Used
