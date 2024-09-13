@@ -13,7 +13,7 @@ export const projects = [
     title: "Json-CSV-Converter",
     subtitle: "React, Node, Express, MongoDB",
     description:
-      "This project is a simple web application designed to upload a JSON file, process it to strip out HTML tags, and convert it into a CSV file. It is a general-purpose utility tool for handling JSON data in the format of arrays of objects, which may contain HTML tags. It is not limited to any specific object structure or use case.",
+      "This project is a utility tool designed to upload a JSON file, process it to strip out HTML tags, and convert it into a CSV file. It is a general-purpose utility tool for handling JSON data in the format of arrays of objects, which may contain HTML tags. It is not limited to any specific object structure or use case.",
     image:
       "https://res.cloudinary.com/dlhs6o8ga/image/upload/v1722787914/snapshot_eb2mcb.jpg",
     github: "https://github.com/Raulanthropos/json-csv",
