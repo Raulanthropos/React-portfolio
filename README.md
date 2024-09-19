@@ -6,7 +6,7 @@ This is the repository for my personal portfolio website, showcasing my projects
 
 - **Interactive QR Code**: Scan the QR code on the navbar to quickly view a snapshot of my CV.
 - **Responsive Design**: Optimized for various devices and screen sizes to ensure a seamless user experience.
-- **Dynamic Project Showcase**: Displays my latest projects with detailed descriptions and live demos.
+- **Dynamic Project Showcase**: Displays my latest projects with detailed descriptions, links to the respective repositories and live demos.
 - **Skill Highlights**: Summarizes my technical skills and proficiencies.
 - **Certificates**: Highlights my professional certifications and achievements.
 - **Contact Form**: Allows visitors to get in touch with me directly through the website.
