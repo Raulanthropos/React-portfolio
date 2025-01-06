@@ -6,7 +6,7 @@ import QRCode from "react-qr-code";
 import "./Navbar.css"
 
 export default function Navbar() {
-  const [value, setValue] = useState("https://drive.google.com/file/d/1OaEX6UGzAzhbsp4MNkgreU766w1gXFAb/view?usp=drive_link");
+  const [value, setValue] = useState("https://drive.google.com/file/d/1-ZhIp-1l0sT7ADhFBimZwN3i6qheymCD/view?usp=drive_link");
   const [back, setBack] = useState('#FFFFFF');
   const [fore, setFore] = useState('#000000');
   const [size, setSize] = useState(72);
