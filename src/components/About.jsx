@@ -4,18 +4,14 @@ export default function About() {
   return (
     <section id="about">
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            Hi, I'm Ioannis Psychias!
+      <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+      <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+            Hello, and welcome to my portfolio!
           </h1>
           <p className="mb-8 leading-relaxed">
-            I developed a love for coding and started learning web and mobile
-            development during the COVID-19 pandemic. I am now focusing on
-            fullstack web development utilizing JavaScript, React, MUI, Redux,
-            TypeScript, Node.js, and Express.js. When I'm not coding, you can
-            often find me with a wagging tail by my side.
+          I discovered my passion for coding during the COVID-19 pandemic and have since built a career in web development. With over 1.5 years of professional experience, I specialize in crafting dynamic and user-friendly applications using React, WordPress, Bootstrap 5, MUI, Tailwind CSS, Redux, TypeScript, Node.js, and Express.js. My focus is on delivering seamless frontend experiences, complemented by strong fullstack capabilities. When I'm not coding, you can often find me enjoying life with a wagging tail by my side.
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center w-full">
             <a
               href="#contact"
               className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg"
