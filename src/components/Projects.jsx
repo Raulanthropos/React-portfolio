@@ -57,8 +57,8 @@ export default function Projects() {
                   </button>
                 </div>
                 <div className="card-footer">
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">
-                    <a
+                <button className={`${!project.github ? "hidden" : "visible"} bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded`}>
+                <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -74,7 +74,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="text-white no-underline"
                     >
-                      Live Demo
+                      {`${!project.github ? "Live Website" : "Live Demo"}`}
                     </a>
                   </button>
                 </div>

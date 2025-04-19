@@ -10,7 +10,7 @@ export const projects = [
     link: "https://marketplace-omega-tawny.vercel.app/",
   },
   {
-    title: "Json-CSV-Converter",
+    title: "Json to CSV Converter",
     subtitle: "React, Node, Express, MongoDB",
     description:
       "This project is a powerful utility tool designed to upload a JSON file, clean it by stripping out any embedded HTML tags, and convert the processed data into a CSV format. It supports both simple and deeply nested JSON structures, and adapts to a wide range of object formats. The tool is not limited to any specific use case, making it suitable for handling diverse JSON data from various APIs or sources.",
@@ -18,6 +18,26 @@ export const projects = [
       "https://res.cloudinary.com/dlhs6o8ga/image/upload/v1726509363/json-csv_ww4a3x.jpg",
     github: "https://github.com/Raulanthropos/json-csv",
     link: "https://json-csv-two.vercel.app/",
+  },
+  {
+    title: "Joke Collection App",
+    subtitle: "Vue js, Tailwind CSS",
+    description:
+      "A Vue 3 app that lets users fetch, view, and manage their favorite jokes — with category switching, localStorage persistence, star ratings, filtering, sorting, and discreet punchline effects.",
+    image:
+      "https://res.cloudinary.com/dlhs6o8ga/image/upload/v1745081086/vue-jokes-app.png",
+    github: "https://github.com/Raulanthropos/vue-jokes-app",
+    link: "https://vue-jokes-app.vercel.app/",
+  },
+  {
+    title: "Orthosymmetry",
+    subtitle: "WordPress, LiveCanvas, PHP, Vanilla JS",
+    description:
+      "A commercial website for OrthoSymmetry, a specialized orthopedic medical team based in Athens, presenting their doctors, services, and treatment approaches while offering appointment scheduling and contact options.",
+    image:
+      "https://res.cloudinary.com/dlhs6o8ga/image/upload/v1745084344/orthosymmetry-gr.png",
+    github: "",
+    link: "https://orthosymmetry.gr",
   },
 ];
 
@@ -27,6 +47,7 @@ export const skills = [
   "JavaScript",
   "React",
   "Redux",
+  "Vue",
   "MUI",
   "Tailwind CSS",
   "Bootstrap 5",
@@ -43,5 +64,5 @@ export const skills = [
   "Figma",
   "Bitbucket",
   "Jira",
-  "Asana"
+  "Asana",
 ];
