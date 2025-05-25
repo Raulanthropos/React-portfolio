@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: "Marketplace",
-    subtitle: "React, MUI, Redux, Zustand, Node, Express, MongoDB",
+    subtitle: "React, MUI, Redux, Zustand, Node.js, Express, MongoDB",
     description:
       "An e-shop application built using MERN, Redux, Zustand, and Material-UI (MUI). The application is fully responsive and provides functionalities such as user registration, login, product viewing, adding reviews, and managing a shopping cart.",
     image:
@@ -11,7 +11,7 @@ export const projects = [
   },
   {
     title: "Json to CSV Converter",
-    subtitle: "React, Node, Express, MongoDB",
+    subtitle: "React, Node.js, Express, MongoDB",
     description:
       "This project is a powerful utility tool designed to upload a JSON file, clean it by stripping out any embedded HTML tags, and convert the processed data into a CSV format. It supports both simple and deeply nested JSON structures, and adapts to a wide range of object formats. The tool is not limited to any specific use case, making it suitable for handling diverse JSON data from various APIs or sources.",
     image:
@@ -30,6 +30,16 @@ export const projects = [
     link: "https://vue-jokes-app.vercel.app/",
   },
   {
+    title: "Hogwarts House App",
+    subtitle: "Next.js, React, Tailwind CSS, Node.js, Express.",
+    description:
+      "A fullstack app displaying and filtering Hogwarts house data via REST API",
+    image:
+      "https://res.cloudinary.com/dlhs6o8ga/image/upload/v1748199856/screencapture-hogwarts-houses-app-vercel-app-2025-05-25-22_02_44_cicyy1.png",
+    github: "https://github.com/Raulanthropos/hogwarts-houses-app",
+    link: "https://hogwarts-houses-app.vercel.app/",
+  },
+  {
     title: "Orthosymmetry",
     subtitle: "WordPress, LiveCanvas, PHP, Vanilla JS",
     description:
@@ -45,6 +55,7 @@ export const skills = [
   "HTML",
   "CSS",
   "JavaScript",
+  "Next js",
   "React",
   "Redux",
   "Vue",
@@ -57,9 +68,13 @@ export const skills = [
   "Node.js",
   "Express.js",
   "MongoDB",
+  "T-SQL",
+  "MySQL",
   "PostgreSQL",
   "TypeScript",
+  "Docker",
   "Git",
+  "GitHub",
   "Plesk",
   "Figma",
   "Bitbucket",
