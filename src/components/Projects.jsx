@@ -30,16 +30,17 @@ export default function Projects() {
         </div>
         <div
           className="
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-          gap-8
-          w-full
-          max-w-6xl
-          mx-auto
-          lg:flex
-          lg:flex-wrap
-          lg:justify-center
+    grid
+    grid-cols-1
+    sm:grid-cols-2
+    gap-8
+    w-full
+    max-w-6xl
+    mx-auto
+    justify-items-center
+    lg:flex
+    lg:flex-wrap
+    lg:justify-center
         "
         >
           {projects.map((project, index) => (

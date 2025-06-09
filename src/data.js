@@ -40,6 +40,16 @@ export const projects = [
     link: "https://hogwarts-houses-app.vercel.app/",
   },
   {
+    title: "GitHub Explorer",
+    subtitle: "React, Bootstrap 5, Zustand.",
+    description:
+      "A GitHub dashboard that displays information about a user's repositories and followers. The app uses Zustand for state management and React Router for navigation.",
+    image:
+      "https://res.cloudinary.com/dlhs6o8ga/image/upload/v1749464284/screencapture-git-hub-explorer-liard-vercel-app-2025-06-09-13_17_29_vlwcn4.png",
+    github: "https://github.com/Raulanthropos/GitHub-Explorer",
+    link: "https://git-hub-explorer-liard.vercel.app/",
+  },
+  {
     title: "Orthosymmetry",
     subtitle: "WordPress, LiveCanvas, PHP, Vanilla JS",
     description:
