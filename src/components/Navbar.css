@@ -2,3 +2,21 @@ header a {
     color: white;
     text-decoration: none;
   }
+
+/* QR wrapper: fixed size, centered, doesn't grow the navbar */
+.qr-wrapper {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Ensure the SVG renders crisply and doesn't add inline descender spacing */
+.qr-wrapper svg {
+  width: 72px;
+  height: 72px;
+  display: block;
+  shape-rendering: crispEdges;
+}

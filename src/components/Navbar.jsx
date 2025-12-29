@@ -7,7 +7,7 @@ import "./Navbar.css";
 
 export default function Navbar() {
   const [value, setValue] = useState(
-    "https://drive.google.com/file/d/16c6rt1aMI3KI5YlTyVNJ2r22Tx02Drr0/view"
+    "https://drive.google.com/file/d/1KSw-cOCV71qhMdNVL_mhB8Somehxwfr5/view"
   );
   const [back, setBack] = useState("#FFFFFF");
   const [fore, setFore] = useState("#000000");
@@ -17,16 +17,23 @@ export default function Navbar() {
     <header className="bg-gray-800 sticky top-0 z-10">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between p-3">
         <a href="#about" className="text-xl" style={{ marginBlock: "auto" }}>
-          IOANNIS PSYCHIAS
+          IOANNIS PSYCHIAS | Athens, Greece
         </a>
         <Tippy content="Scan to view my CV">
-          <div>
+          <div className="qr-wrapper" aria-label="QR code to CV">
             <QRCode
               value={value}
               size={size}
               bgColor={back}
               fgColor={fore}
               level={"Q"}
+              title="My CV QR code"
+              style={{
+                height: "auto",
+                maxWidth: "100%",
+                display: "block",
+                shapeRendering: "crispEdges",
+              }}
             />
           </div>
         </Tippy>

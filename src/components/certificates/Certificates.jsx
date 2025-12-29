@@ -23,14 +23,35 @@ const certificates = [
 ];
 
 const Certificates = () => {
+  // custom arrow components: accept known DOM props and ignore unknown ones
+  const PrevArrow = ({ className, style, onClick }) => (
+    <button
+      type="button"
+      className={className}
+      style={style}
+      onClick={onClick}
+      aria-label="Previous"
+    />
+  );
+
+  const NextArrow = ({ className, style, onClick }) => (
+    <button
+      type="button"
+      className={className}
+      style={style}
+      onClick={onClick}
+      aria-label="Next"
+    />
+  );
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: <button type="button" className="slick-prev"></button>,
-    nextArrow: <button type="button" className="slick-next"></button>,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
   };
 
   return (

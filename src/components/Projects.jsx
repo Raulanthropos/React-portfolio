@@ -20,12 +20,10 @@ export default function Projects() {
         <div className="flex flex-col w-full mb-20">
           <CodeIcon className="mx-auto inline-block w-10 mb-4" />
           <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
-            Apps I've Built
+            Applications
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            I'm a creative developer who loves to work on easy to use and
-            appealing Web Applications, with a passion for creating and
-            consuming APIs. Below you may find some of my latest projects.
+            A selection of applications built for real-world use, ranging from internal management systems to data-processing utilities and commercial websites. Each project reflects an emphasis on correctness, clarity, and long-term maintainability.
           </p>
         </div>
         <div

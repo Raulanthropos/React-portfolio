@@ -8,15 +8,14 @@ export default function About() {
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Hello, and welcome to my portfolio!
           </h1>
-          <p className="mb-8 leading-relaxed">
-            I discovered my passion for coding a few years ago and have since
-            built a career in web development. With 2 years of professional
-            experience, I specialize in crafting dynamic and user-friendly web
-            apps, from e-commerce to admin dashboards, using React, WordPress,
-            Bootstrap 5, MUI, Tailwind CSS, Redux, TypeScript, Node.js, and
-            Express.js. I love solving real problems with clean code and
-            thoughtful design. When I'm not coding, you can often find me
-            enjoying life with a wagging tail by my side.
+          <p className="mb-8 leading-relaxed text-justify">
+            I build production-grade web applications that solve operational problems.
+
+            My work focuses on internal tools, admin dashboards, and data-driven systems where correctness, performance, and maintainability matter. I’m comfortable owning features end-to-end — from frontend architecture and state management to backend APIs, data models, and deployment workflows.
+
+            The projects here reflect how I work in real environments: role-based access control, non-trivial data flows, integrations, and interfaces designed for people who use them daily — not demos.
+
+            When I’m not coding, I’m usually offline with a wagging tail nearby.
           </p>
           <div className="flex justify-center w-full">
             <a
