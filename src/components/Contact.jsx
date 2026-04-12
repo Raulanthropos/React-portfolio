@@ -13,12 +13,11 @@ export default function Contact() {
     e.preventDefault();
 
     setIsLoading(true);
+    setIsSuccess(false);
+    setIsError(false);
+
     try {
-      const templateParams = {
-        name,
-        email,
-        message,
-      };
+      const templateParams = { name, email, message };
 
       const response = await emailjs.send(
         "service_x4owk7q",
@@ -28,72 +27,73 @@ export default function Contact() {
       );
 
       if (response.status === 200) {
-        setIsLoading(false);
         setIsSuccess(true);
         setName("");
         setEmail("");
         setMessage("");
       } else {
-        setIsLoading(false);
         setIsError(true);
       }
     } catch (error) {
       setIsError(true);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
     <section id="contact" className="items-center px-3">
       <div className="flex flex-col items-center mt-10">
-        <h2 className="text-3xl font-medium mb-5">Get in Touch</h2>
+        <h2 className="title-font sm:text-4xl text-3xl font-medium mb-5 text-white">
+          Get in Touch
+        </h2>
         <form
           onSubmit={handleSubmit}
-          className="max-w-3xl w-full bg-gray-100 rounded-lg p-6"
+          className="max-w-3xl w-full bg-gray-800 rounded-lg p-6"
         >
           <div className="mb-4">
-            <label htmlFor="name" className="text-black font-bold">
+            <label htmlFor="name" className="block text-gray-300 font-bold mb-1">
               Your Name
             </label>
             <input
+              id="name"
               type="text"
               name="name"
               value={name}
               placeholder="Name..."
               onChange={(e) => setName(e.target.value)}
-              className="block w-full rounded-lg border-gray-300 focus:border-green-500 focus:ring-green-500"
+              className="block w-full rounded-lg bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none"
               required
             />
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="email"
-              placeholder="Email id"
-              className="text-black font-bold"
-            >
+            <label htmlFor="email" className="block text-gray-300 font-bold mb-1">
               Your Email
             </label>
             <input
+              id="email"
               type="email"
               name="email"
               value={email}
               placeholder="Email..."
               onChange={(e) => setEmail(e.target.value)}
-              className="block w-full rounded-lg border-gray-300 focus:border-green-500 focus:ring-green-500"
+              className="block w-full rounded-lg bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none"
               required
             />
           </div>
 
           <div className="mb-4">
-            <label htmlFor="message" className="text-black font-bold">
+            <label htmlFor="message" className="block text-gray-300 font-bold mb-1">
               Your Message
             </label>
             <textarea
+              id="message"
               name="message"
               value={message}
               placeholder="Message..."
               onChange={(e) => setMessage(e.target.value)}
-              className="block w-full rounded-lg border-gray-300 focus:border-green-500 focus:ring-green-500"
+              className="block w-full rounded-lg bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none"
               rows="6"
               required
             ></textarea>
@@ -102,37 +102,35 @@ export default function Contact() {
           <div className="mt-6">
             <button
               type="submit"
-              className="w-full px-4 py-2 rounded-lg bg-green-500 text-white hover:bg-green-600 focus:bg-green-600 focus:outline-none"
+              disabled={isLoading}
+              className="w-full px-4 py-2 rounded-lg bg-green-500 text-white hover:bg-green-600 focus:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
             >
-              Send Message
+              {isLoading ? "Sending…" : "Send Message"}
             </button>
           </div>
-          {isLoading && (
-            <p className="text-green-600 mt-4">Sending message...</p>
-          )}
+
           {isSuccess && (
-            <p className="text-green-600 mt-4">
+            <p className="text-green-400 mt-4">
               Thank you for your message! I'll get back to you soon.
             </p>
           )}
-            {
-              isError && (
-                <p className="text-red-600 mt-4">
-                  Oops! Something went wrong. Please try again later.
-                </p>
-              )
-            }
+          {isError && (
+            <p className="text-red-400 mt-4">
+              Oops! Something went wrong. Please try again later.
+            </p>
+          )}
         </form>
       </div>
 
-      <div className="flex flex-col items-center mt-10">
+      <div className="flex flex-col items-center mt-10 mb-10">
         <h3 className="text-lg font-medium mb-3">You can also find me at:</h3>
         <div className="flex mb-5">
           <a
             href="https://www.github.com/Raulanthropos"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-3xl mx-3"
+            aria-label="GitHub profile"
+            className="text-3xl mx-3 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
           >
             <i className="fab fa-github"></i>
           </a>
@@ -140,15 +138,15 @@ export default function Contact() {
             href="https://www.linkedin.com/in/ioannis-psychias/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-3xl mx-3"
+            aria-label="LinkedIn profile"
+            className="text-3xl mx-3 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
           >
             <i className="fab fa-linkedin"></i>
           </a>
           <a
             href="mailto:ipsichias@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-3xl mx-3"
+            aria-label="Send email"
+            className="text-3xl mx-3 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
           >
             <i className="far fa-envelope"></i>
           </a>

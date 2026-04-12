@@ -5,54 +5,59 @@
 }
 
 .snake-border {
-  border: 5px groove transparent;
   position: relative;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* Comet sweeping around the border — bright head, long fading tail, dark everywhere else */
+.snake-border::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: conic-gradient(
+    #111827 0deg,
+    #ff2ecc 3deg,
+    #ee10cc 18deg,
+    #c200a0 35deg,
+    #8b1070 60deg,
+    #4a0a50 90deg,
+    #1a0828 120deg,
+    #111827 145deg,
+    #111827 360deg
+  );
+  animation: border-spin 2.5s linear infinite;
+  z-index: 0;
+}
+
+/* Inset panel that becomes the card background, sitting above the gradient */
+.snake-border::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background: #1f2937;
+  border-radius: calc(0.5rem - 5px);
   z-index: 1;
 }
 
-.snake-border:before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border: 5px groove transparent;
-  border-radius: 5%;
-  animation: snake 2s infinite;
-  z-index: -1;
+/* Lift all direct card children above the ::after background layer */
+.snake-border > * {
+  position: relative;
+  z-index: 2;
 }
 
-@keyframes snake {
-  0% {
-    border-top-color: #4b205e;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
+@keyframes border-spin {
+  to {
+    transform: rotate(360deg);
   }
-  25% {
-    border-top-color: transparent;
-    border-right-color: #b70188;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-  }
-  50% {
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: #4b205e;
-  }
-  75% {
-    border-top-color: transparent;
-    border-left-color: #b70188;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-  }
-  100% {
-    border-top-color: #b70188;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .snake-border::before {
+    animation: none;
   }
 }
 

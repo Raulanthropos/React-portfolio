@@ -8,25 +8,25 @@ export default function About() {
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Hello, and welcome to my portfolio!
           </h1>
-          <p className="mb-8 leading-relaxed text-justify">
+          <p className="mb-8 leading-relaxed">
             I build production-grade web applications that solve operational problems.
 
-            My work focuses on internal tools, admin dashboards, and data-driven systems where correctness, performance, and maintainability matter. I’m comfortable owning features end-to-end — from frontend architecture and state management to backend APIs, data models, and deployment workflows.
+            My work focuses on internal tools, admin dashboards, and data-driven systems where correctness, performance, and maintainability matter. I'm comfortable owning features end-to-end — from frontend architecture and state management to backend APIs, data models, and deployment workflows.
 
             The projects here reflect how I work in real environments: role-based access control, non-trivial data flows, integrations, and interfaces designed for people who use them daily — not demos.
 
-            When I’m not coding, I’m usually offline with a wagging tail nearby.
+            When I'm not coding, I'm usually offline with a wagging tail nearby.
           </p>
           <div className="flex justify-center w-full">
             <a
               href="#contact"
-              className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg"
+              className="inline-flex text-white bg-green-500 border-0 py-2 px-6 hover:bg-green-600 rounded text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors"
             >
               Contact Me
             </a>
             <a
               href="#projects"
-              className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg"
+              className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 hover:bg-gray-700 hover:text-white rounded text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors"
             >
               See My Past Work
             </a>
@@ -36,7 +36,7 @@ export default function About() {
           <div className="w-64 h-64 overflow-hidden mx-auto">
             <img
               className="object-cover object-center w-full h-full"
-              alt="hero"
+              alt="Ioannis Psychias, full-stack developer"
               src="https://res.cloudinary.com/dlhs6o8ga/image/upload/v1720848432/Raul_vil6oq.jpg"
               style={{ borderRadius: "50%" }}
             />

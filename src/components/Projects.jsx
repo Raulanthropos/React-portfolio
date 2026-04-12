@@ -44,11 +44,11 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col w-64 mx-4 my-4 bg-gray rounded-lg shadow-lg snake-border card-container"
+              className="flex flex-col w-64 mx-4 my-4 rounded-lg snake-border card-container"
             >
               <img
                 src={project.image}
-                alt="Project Thumbnail"
+                alt={`${project.title} thumbnail`}
                 className="object-cover object-center w-full h-48 rounded-t-lg card-image overflow-hidden"
               />
               <div className="card-content">
@@ -69,30 +69,24 @@ export default function Projects() {
                   </button>
                 </div>
                 <div className="card-footer">
-                  <button
-                    className={`${
-                      !project.github ? "hidden" : "visible"
-                    } bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded`}
-                  >
+                  {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white no-underline"
+                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded no-underline"
                     >
                       Source
                     </a>
-                  </button>
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white no-underline"
-                    >
-                      {`${!project.github ? "Live Website" : "Live Demo"}`}
-                    </a>
-                  </button>
+                  )}
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded no-underline"
+                  >
+                    {!project.github ? "Live Website" : "Live Demo"}
+                  </a>
                 </div>
               </div>
             </div>
