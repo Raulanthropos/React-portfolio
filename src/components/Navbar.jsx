@@ -5,38 +5,35 @@ import "tippy.js/dist/tippy.css";
 import QRCode from "react-qr-code";
 import "./Navbar.css";
 
+const NAV_LINKS = [
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
+  { href: "#certificates", label: "Certificates" },
+];
+
 export default function Navbar() {
   const [value] = useState(
     "https://drive.google.com/file/d/1KSw-cOCV71qhMdNVL_mhB8Somehxwfr5/view"
   );
-  const [back] = useState("#FFFFFF");
-  const [fore] = useState("#000000");
-  const [size] = useState(72);
 
   return (
-    <header className="bg-gray-800 sticky top-0 z-10">
-      <div className="navbar-container container mx-auto flex flex-col md:flex-row items-center justify-between p-3">
+    <header className="glass-nav sticky top-0 z-50">
+      <div className="navbar-container container mx-auto flex flex-col md:flex-row items-center justify-between px-6 py-3">
         <a
           href="#about"
-          className="text-xl focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
-          style={{ marginBlock: "auto" }}
+          className="text-sm font-semibold tracking-wide text-white hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
         >
-          IOANNIS PSYCHIAS | Athens, Greece
+          Ioannis Psychias
         </a>
 
         <Tippy content="Scan to view my CV" trigger="mouseenter focus">
-          <div
-            className="qr-wrapper"
-            aria-label="QR code to CV"
-            tabIndex={0}
-            role="img"
-          >
+          <div className="qr-wrapper" aria-label="QR code to CV" tabIndex={0} role="img">
             <QRCode
               value={value}
-              size={size}
-              bgColor={back}
-              fgColor={fore}
-              level={"Q"}
+              size={72}
+              bgColor="#FFFFFF"
+              fgColor="#000000"
+              level="Q"
               title="My CV QR code"
               style={{
                 height: "auto",
@@ -48,34 +45,24 @@ export default function Navbar() {
           </div>
         </Tippy>
 
-        <div className="flex flex-col md:flex-row items-center justify-center md:mt-0">
-          <nav className="md:mr-5 flex flex-col md:flex-row items-center text-base">
-            <a
-              href="#projects"
-              className="md:mr-5 hover:text-blue-400 hover:bg-gray-700 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors"
-            >
-              Projects
-            </a>
-            <a
-              href="#skills"
-              className="md:mr-5 hover:text-blue-400 hover:bg-gray-700 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors"
-            >
-              Skills
-            </a>
-            <a
-              href="#certificates"
-              className="md:mr-5 hover:text-blue-400 hover:bg-gray-700 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors"
-            >
-              Certificates
-            </a>
+        <div className="flex flex-col md:flex-row items-center gap-1 md:gap-0">
+          <nav className="flex flex-col md:flex-row items-center text-sm">
+            {NAV_LINKS.map(({ href, label }) => (
+              <a
+                key={href}
+                href={href}
+                className="md:mx-4 py-1.5 text-slate-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
+              >
+                {label}
+              </a>
+            ))}
           </nav>
           <a
             href="#contact"
-            className="inline-flex items-center bg-gray-700 border-0 py-1 px-3 hover:bg-gray-600 rounded text-base md:mt-0 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors"
-            style={{ marginBlock: "auto" }}
+            className="inline-flex items-center mt-2 md:mt-0 px-4 py-1.5 rounded-full text-sm font-medium bg-white/10 text-white hover:bg-white/15 border border-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            Contact me
-            <ArrowRightIcon className="w-4 h-4 ml-1" />
+            Contact
+            <ArrowRightIcon className="w-3.5 h-3.5 ml-1.5" />
           </a>
         </div>
       </div>

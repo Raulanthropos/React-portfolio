@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { CodeIcon } from "@heroicons/react/solid";
 import { projects } from "../data";
 import "./Projects.css";
 
@@ -15,46 +14,42 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="text-gray-400 bg-gray-900 body-font">
-      <div className="container px-5 py-10 mx-auto text-center justify-center lg:px-40">
-        <div className="flex flex-col w-full mb-20">
-          <CodeIcon className="mx-auto inline-block w-10 mb-4" />
-          <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
-            Applications
-          </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            A selection of applications built for real-world use, ranging from internal management systems to data-processing utilities and commercial websites. Each project reflects an emphasis on correctness, clarity, and long-term maintainability.
+    <section id="projects" className="py-20 lg:py-28">
+      <div className="container px-6 mx-auto max-w-6xl">
+        <div className="mb-16 text-center lg:text-left">
+          <span className="section-label">Selected Work</span>
+          <h2 className="section-title mb-4">Applications</h2>
+          <p className="section-subtitle mx-auto lg:mx-0">
+            A selection of applications built for real-world use — internal
+            management systems, data-processing utilities, and commercial
+            websites. Each project reflects an emphasis on correctness, clarity,
+            and long-term maintainability.
           </p>
         </div>
-        <div
-          className="
-    grid
-    grid-cols-1
-    sm:grid-cols-2
-    gap-8
-    w-full
-    max-w-6xl
-    mx-auto
-    justify-items-center
-    lg:flex
-    lg:flex-wrap
-    lg:justify-center
-        "
-        >
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <div
+            <article
               key={index}
-              className="flex flex-col w-64 mx-4 my-4 rounded-lg snake-border card-container"
+              className="card-surface flex flex-col overflow-hidden card-container"
             >
-              <img
-                src={project.image}
-                alt={`${project.title} thumbnail`}
-                className="object-cover object-center w-full h-48 rounded-t-lg card-image overflow-hidden"
-              />
-              <div className="card-content">
-                <h2 className="font-bold text-lg mb-1">{project.title}</h2>
+              <div className="relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={`${project.title} thumbnail`}
+                  className="w-full h-44 object-cover card-image"
+                />
+                {project.subtitle && (
+                  <div className="absolute bottom-0 inset-x-0 px-4 py-2 bg-gradient-to-t from-black/80 to-transparent">
+                    <p className="text-xs text-slate-300 truncate">{project.subtitle}</p>
+                  </div>
+                )}
+              </div>
+
+              <div className="card-content flex-1 flex flex-col p-5">
+                <h3 className="font-semibold text-lg text-white mb-2">{project.title}</h3>
                 <div
-                  className={`text-sm mb-2 px-2 card-description ${
+                  className={`text-sm text-slate-400 mb-4 card-description ${
                     expandedDescriptions[index] ? "expanded" : ""
                   }`}
                 >
@@ -63,18 +58,19 @@ export default function Projects() {
                     : `${project.description.substring(0, 100)}...`}
                   <button
                     onClick={() => toggleDescription(index)}
-                    className="text-blue-500 hover:text-blue-700 font-semibold no-underline"
+                    className="text-blue-400 hover:text-blue-300 font-medium ml-1 focus:outline-none"
                   >
                     {expandedDescriptions[index] ? "See Less" : "See More"}
                   </button>
                 </div>
-                <div className="card-footer">
+
+                <div className="card-footer mt-auto flex gap-2">
                   {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded no-underline"
+                      className="cta-secondary flex-1 text-xs py-2"
                     >
                       Source
                     </a>
@@ -83,15 +79,14 @@ export default function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded no-underline"
+                    className="cta-primary flex-1 text-xs py-2"
                   >
                     {!project.github ? "Live Website" : "Live Demo"}
                   </a>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
-          {projects.length % 3 === 2 && <div className="invisible lg:block" />}
         </div>
       </div>
     </section>

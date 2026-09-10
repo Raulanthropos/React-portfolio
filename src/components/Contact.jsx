@@ -42,17 +42,23 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="items-center px-3">
-      <div className="flex flex-col items-center mt-10">
-        <h2 className="title-font sm:text-4xl text-3xl font-medium mb-5 text-white">
-          Get in Touch
-        </h2>
+    <section id="contact" className="py-20 lg:py-28 pb-32">
+      <div className="container px-6 mx-auto max-w-xl">
+        <div className="text-center mb-10">
+          <span className="section-label">Let's Talk</span>
+          <h2 className="section-title">Get in Touch</h2>
+          <p className="section-subtitle mx-auto mt-4">
+            Have a project in mind or need a full-stack developer? Send me a
+            message and I'll get back to you.
+          </p>
+        </div>
+
         <form
           onSubmit={handleSubmit}
-          className="max-w-3xl w-full bg-gray-800 rounded-lg p-6"
+          className="card-surface p-6 sm:p-8 space-y-5"
         >
-          <div className="mb-4">
-            <label htmlFor="name" className="block text-gray-300 font-bold mb-1">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-1.5">
               Your Name
             </label>
             <input
@@ -62,13 +68,13 @@ export default function Contact() {
               value={name}
               placeholder="Name..."
               onChange={(e) => setName(e.target.value)}
-              className="block w-full rounded-lg bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none"
+              className="block w-full rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 px-4 py-2.5 focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-colors"
               required
             />
           </div>
 
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-300 font-bold mb-1">
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-1.5">
               Your Email
             </label>
             <input
@@ -78,13 +84,13 @@ export default function Contact() {
               value={email}
               placeholder="Email..."
               onChange={(e) => setEmail(e.target.value)}
-              className="block w-full rounded-lg bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none"
+              className="block w-full rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 px-4 py-2.5 focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-colors"
               required
             />
           </div>
 
-          <div className="mb-4">
-            <label htmlFor="message" className="block text-gray-300 font-bold mb-1">
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-1.5">
               Your Message
             </label>
             <textarea
@@ -93,63 +99,61 @@ export default function Contact() {
               value={message}
               placeholder="Message..."
               onChange={(e) => setMessage(e.target.value)}
-              className="block w-full rounded-lg bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none"
-              rows="6"
+              className="block w-full rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 px-4 py-2.5 focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-colors resize-none"
+              rows="5"
               required
-            ></textarea>
+            />
           </div>
 
-          <div className="mt-6">
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full px-4 py-2 rounded-lg bg-green-500 text-white hover:bg-green-600 focus:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
-            >
-              {isLoading ? "Sending…" : "Send Message"}
-            </button>
-          </div>
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="cta-primary w-full disabled:opacity-60 disabled:cursor-not-allowed"
+          >
+            {isLoading ? "Sending…" : "Send Message"}
+          </button>
 
           {isSuccess && (
-            <p className="text-green-400 mt-4">
+            <p className="text-emerald-400 text-sm text-center">
               Thank you for your message! I'll get back to you soon.
             </p>
           )}
           {isError && (
-            <p className="text-red-400 mt-4">
+            <p className="text-red-400 text-sm text-center">
               Oops! Something went wrong. Please try again later.
             </p>
           )}
         </form>
-      </div>
 
-      <div className="flex flex-col items-center mt-10 mb-10">
-        <h3 className="text-lg font-medium mb-3">You can also find me at:</h3>
-        <div className="flex mb-5">
-          <a
-            href="https://www.github.com/Raulanthropos"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub profile"
-            className="text-3xl mx-3 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
-          >
-            <i className="fab fa-github"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/ioannis-psychias/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn profile"
-            className="text-3xl mx-3 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
-          >
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a
-            href="mailto:ipsichias@gmail.com"
-            aria-label="Send email"
-            className="text-3xl mx-3 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
-          >
-            <i className="far fa-envelope"></i>
-          </a>
+        <div className="flex flex-col items-center mt-12">
+          <p className="text-sm text-slate-500 mb-4">You can also find me at</p>
+          <div className="flex gap-5">
+            <a
+              href="https://www.github.com/Raulanthropos"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile"
+              className="text-2xl text-slate-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+            >
+              <i className="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ioannis-psychias/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
+              className="text-2xl text-slate-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+            >
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="mailto:ipsichias@gmail.com"
+              aria-label="Send email"
+              className="text-2xl text-slate-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+            >
+              <i className="far fa-envelope"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>

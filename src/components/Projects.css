@@ -1,136 +1,62 @@
 :root {
-  --scrollbar-bg: #f1f1f1;
-  --scrollbar-thumb: #888;
-  --scrollbar-thumb-hover: #555;
-}
-
-.snake-border {
-  position: relative;
-  border-radius: 0.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-}
-
-/* Comet sweeping around the border — bright head, long fading tail, dark everywhere else */
-.snake-border::before {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  top: -50%;
-  left: -50%;
-  background: conic-gradient(
-    #111827 0deg,
-    #ff2ecc 3deg,
-    #ee10cc 18deg,
-    #c200a0 35deg,
-    #8b1070 60deg,
-    #4a0a50 90deg,
-    #1a0828 120deg,
-    #111827 145deg,
-    #111827 360deg
-  );
-  animation: border-spin 2.5s linear infinite;
-  z-index: 0;
-}
-
-/* Inset panel that becomes the card background, sitting above the gradient */
-.snake-border::after {
-  content: "";
-  position: absolute;
-  inset: 5px;
-  background: #1f2937;
-  border-radius: calc(0.5rem - 5px);
-  z-index: 1;
-}
-
-/* Lift all direct card children above the ::after background layer */
-.snake-border > * {
-  position: relative;
-  z-index: 2;
-}
-
-@keyframes border-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .snake-border::before {
-    animation: none;
-  }
+  --scrollbar-bg: #1e293b;
+  --scrollbar-thumb: #475569;
+  --scrollbar-thumb-hover: #64748b;
 }
 
 .card-container {
-  height: 400px; /* Fixed height for the card */
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
+  min-height: 380px;
 }
 
 .card-content {
-  flex: 1; /* Take available space */
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 
 .card-description {
-  max-height: 100px; /* Fixed height for the description */
-  transition: max-height 0.3s ease; /* Smooth transition */
+  max-height: 4.5rem;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 .card-description.expanded {
-  max-height: 200px; /* Expanded height */
-  overflow-y: scroll;
-  scrollbar-width: none;
+  max-height: 12rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 
 .card-description::-webkit-scrollbar {
-  width: 8px; /* Width of the entire scrollbar */
+  width: 6px;
 }
 
 .card-description::-webkit-scrollbar-track {
-  background: var(--scrollbar-bg); /* Color of the track */
+  background: var(--scrollbar-bg);
 }
 
 .card-description::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-thumb); /* Color of the thumb */
-  border-radius: 10px; /* Rounded corners for the thumb */
+  background-color: var(--scrollbar-thumb);
+  border-radius: 10px;
 }
 
 .card-description::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover); /* Color of the thumb on hover */
+  background: var(--scrollbar-thumb-hover);
 }
 
 .card-footer {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  margin-bottom: 16px;
 }
 
 .card-image {
-  width: 94%;
-  height: 120px;
-  padding-left: 2px;
-  object-fit: cover;
-  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card-surface:hover .card-image {
+  transform: scale(1.03);
 }
 
 @media screen and (max-width: 767px) {
-  .verticalwhenmobile {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .card-footer {
     flex-direction: column;
-    gap: 8px;
   }
 }

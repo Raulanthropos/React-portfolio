@@ -1,7 +1,6 @@
 header a {
-    color: white;
-    text-decoration: none;
-  }
+  text-decoration: none;
+}
 
 /* QR wrapper: fixed size, centered, doesn't grow the navbar */
 .qr-wrapper {

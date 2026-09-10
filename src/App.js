@@ -1,5 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./App.css";
 import React from "react";
 import About from "./components/About.jsx";
@@ -11,14 +10,18 @@ import Certificates from "./components/certificates/Certificates.jsx";
 
 function App() {
   return (
-    <main className="text-gray-400 bg-gray-900 body-font">
+    <main className="min-h-screen text-slate-400 bg-[var(--bg-base)]">
       <Navbar />
       <About />
+      <div className="section-divider mx-auto max-w-5xl" />
       <Projects />
+      <div className="section-divider mx-auto max-w-5xl" />
       <Skills />
+      <div className="section-divider mx-auto max-w-5xl" />
       <Certificates />
+      <div className="section-divider mx-auto max-w-5xl" />
       <Contact />
-      </main>
+    </main>
   );
 }
 
