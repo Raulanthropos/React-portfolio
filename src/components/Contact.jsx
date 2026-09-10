@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
+function getEmailJsErrorMessage(error, response) {
+  if (error?.text) return error.text;
+  if (error?.message) return error.message;
+  if (response?.text) return response.text;
+  if (response?.status) return `EmailJS request failed with status ${response.status}`;
+  return "Unknown EmailJS error";
+}
+
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -15,12 +24,13 @@ export default function Contact() {
     setIsLoading(true);
     setIsSuccess(false);
     setIsError(false);
+    setErrorMessage("");
 
     try {
       const templateParams = { name, email, message };
 
       const response = await emailjs.send(
-        "service_x4owk7q",
+        "service_j69eodl",
         "template_ceejems",
         templateParams,
         "GoygN0xGfGhvIxjY0"
@@ -32,9 +42,15 @@ export default function Contact() {
         setEmail("");
         setMessage("");
       } else {
+        const detail = getEmailJsErrorMessage(null, response);
+        console.error("EmailJS send failed:", { response, detail });
+        setErrorMessage(detail);
         setIsError(true);
       }
     } catch (error) {
+      const detail = getEmailJsErrorMessage(error);
+      console.error("EmailJS send error:", error);
+      setErrorMessage(detail);
       setIsError(true);
     } finally {
       setIsLoading(false);
@@ -119,9 +135,16 @@ export default function Contact() {
             </p>
           )}
           {isError && (
-            <p className="text-red-400 text-sm text-center">
-              Oops! Something went wrong. Please try again later.
-            </p>
+            <div className="text-sm text-center space-y-2">
+              <p className="text-red-400">
+                Oops! Something went wrong. Please try again later.
+              </p>
+              {errorMessage && (
+                <p className="text-red-300/90 text-xs break-words rounded-lg bg-red-500/10 border border-red-500/20 px-3 py-2 font-mono">
+                  {errorMessage}
+                </p>
+              )}
+            </div>
           )}
         </form>
 
