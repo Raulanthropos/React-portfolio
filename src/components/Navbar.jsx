@@ -8,7 +8,6 @@ import "./Navbar.css";
 const NAV_LINKS = [
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },
-  { href: "#certificates", label: "Certificates" },
 ];
 
 export default function Navbar() {

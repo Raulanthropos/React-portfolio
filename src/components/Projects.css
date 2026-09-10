@@ -4,6 +4,14 @@
   --scrollbar-thumb-hover: #64748b;
 }
 
+.featured-project {
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+.featured-project-image {
+  display: block;
+}
+
 .card-container {
   min-height: 380px;
 }

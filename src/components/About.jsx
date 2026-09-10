@@ -16,8 +16,11 @@ export default function About() {
                 />
               </div>
             </div>
-            <p className="mt-5 text-sm text-slate-500">
-              Athens, Greece
+            <p className="mt-5 text-sm text-slate-500">Athens, Greece</p>
+            <p className="mt-1 text-xs text-slate-600 max-w-xs leading-relaxed">
+              EPICODE Institute of Technology
+              <br />
+              Full-stack Development · 2022-2023
             </p>
           </div>
 
@@ -31,23 +34,27 @@ export default function About() {
 
             <div className="space-y-4 section-subtitle mb-8">
               <p>
-                I'm a full-stack TypeScript developer with nearly three years of
-                professional experience. I work across React frontends, Node.js
-                APIs, GraphQL and REST integrations, SQL databases, and
-                WordPress/PHP when the project calls for it.
+                Nearly three years of professional experience building production
+                regulatory and internal systems across frontend, backend, and
+                infrastructure.
               </p>
               <p>
-                I started on the MERN stack and have moved toward TypeScript-heavy
-                full-stack work and system integration (AWS, Kafka, Supabase,
-                Vercel, Railway, CSV/Excel pipelines, and wiring external systems
-                together so data actually flows where it needs to go). I handle
-                multiple clients end to end, from architecture and implementation
-                through deployment.
+                I work with React, GraphQL and REST APIs, SQL databases, and AWS
+                (Lambda, API Gateway, CloudFront). I take features from requirements
+                through architecture, implementation, and deployment, often handling
+                client work directly with high ownership.
               </p>
               <p>
-                The projects here aren't demos. They're internal tools, data
-                processors, and client work built for daily use: role-based access,
-                non-trivial data flows, and interfaces people rely on.
+                The anchor project here is{" "}
+                <a
+                  href="#projects"
+                  className="text-blue-400 hover:text-blue-300 underline-offset-2 hover:underline"
+                >
+                  Internal Task Force
+                </a>
+                : a TypeScript monorepo with strict RBAC and multi-team ticketing.
+                Also included: a JSON-to-CSV data utility and production WordPress
+                client sites.
               </p>
               <p className="text-slate-500 italic">
                 When I'm not coding, I'm usually offline with a wagging tail

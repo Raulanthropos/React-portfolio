@@ -6,7 +6,6 @@ import Contact from "./components/Contact.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Projects from "./components/Projects.jsx";
 import Skills from "./components/Skills.jsx";
-import Certificates from "./components/certificates/Certificates.jsx";
 
 function App() {
   return (
@@ -17,8 +16,6 @@ function App() {
       <Projects />
       <div className="section-divider mx-auto max-w-5xl" />
       <Skills />
-      <div className="section-divider mx-auto max-w-5xl" />
-      <Certificates />
       <div className="section-divider mx-auto max-w-5xl" />
       <Contact />
     </main>

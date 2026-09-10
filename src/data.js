@@ -11,9 +11,16 @@ export const projects = [
   // },
   {
     title: "Internal Task Force",
-    subtitle: "React, TypeScript, Tailwind, GraphQL, Node.js, MySQL",
+    featured: true,
+    subtitle: "TypeScript monorepo · GraphQL · Prisma · PostgreSQL",
     description:
-      "An internal project management and ticketing system built for real operational use. Supports scoped projects, tickets, threaded discussions, and notifications, with strict Role-Based Access Control governing visibility and actions across teams. Designed to handle non-trivial workflows and long-lived internal data.",
+      "A TypeScript monorepo (pnpm) for multi-team project and ticket management, built for real operational use. The GraphQL API uses JWT auth and Prisma on PostgreSQL. RBAC spans Admin, Lead, and Engineer roles, with team-scoped access for Software, Structural, Electrical, and Environmental teams. Scoped projects support ticket lifecycles, threaded comments, configurable cross-team visibility, and notifications. Deployed on Vercel (web), Render (API), and Neon (database), with a live demo and role-based test accounts.",
+    highlights: [
+      "Strict RBAC with Admin, Lead, and Engineer roles plus team-scoped data access",
+      "GraphQL API, JWT auth, Prisma, and PostgreSQL with a multi-model domain (clients, projects, scopes, tickets)",
+      "Multi-team ticket workflows, comments, cross-team visibility controls, and notifications",
+      "Monorepo: React/Vite/Tailwind frontend, Express/GraphQL Yoga API, deployed on Vercel, Render, and Neon",
+    ],
     image:
       "https://res.cloudinary.com/dlhs6o8ga/image/upload/v1766745926/mh_logo_jj4rqu.png",
     github: "https://github.com/Raulanthropos/internal-task-force",
