@@ -43,15 +43,7 @@
   }
 
   .section-label {
-    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-blue-400 mb-4;
-  }
-
-  .section-label::before {
-    content: '';
-    display: inline-block;
-    width: 1.25rem;
-    height: 1px;
-    background: var(--accent-blue);
+    @apply inline-flex items-center text-xs font-semibold uppercase tracking-widest text-blue-400 mb-4;
   }
 
   .section-title {
