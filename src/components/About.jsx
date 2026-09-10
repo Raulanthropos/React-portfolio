@@ -1,18 +1,5 @@
 import React from "react";
 
-const TECH_STACK = [
-  "TypeScript",
-  "React",
-  "Node.js",
-  "GraphQL",
-  "REST APIs",
-  "SQL",
-  "AWS",
-  "Kafka",
-  "Supabase",
-  "Vercel",
-];
-
 export default function About() {
   return (
     <section id="about" className="relative overflow-hidden hero-glow dot-grid">
@@ -66,14 +53,6 @@ export default function About() {
                 When I'm not coding, I'm usually offline with a wagging tail
                 nearby.
               </p>
-            </div>
-
-            <div className="flex flex-wrap gap-2 mb-8">
-              {TECH_STACK.map((tech) => (
-                <span key={tech} className="pill-badge">
-                  {tech}
-                </span>
-              ))}
             </div>
 
             <div className="flex flex-wrap gap-3 justify-center lg:justify-start">

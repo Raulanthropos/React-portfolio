@@ -1,19 +1,23 @@
 import React from "react";
-import { skills } from "../data";
+import { coreTech } from "../data";
 
 export default function Skills() {
   return (
     <section id="skills" className="py-20 lg:py-28">
       <div className="container px-6 mx-auto max-w-5xl">
         <div className="mb-12 text-center lg:text-left">
-          <span className="section-label">Expertise</span>
-          <h2 className="section-title">Skills &amp; Technologies</h2>
+          <span className="section-label">Tech Stack</span>
+          <h2 className="section-title mb-4">Technologies I Work With</h2>
+          <p className="section-subtitle mx-auto lg:mx-0">
+            The languages, frameworks, and platforms I use regularly in
+            production and client work.
+          </p>
         </div>
 
         <div className="flex flex-wrap gap-3">
-          {skills.map((skill) => (
-            <span key={skill} className="skill-pill">
-              {skill}
+          {coreTech.map((tech) => (
+            <span key={tech} className="skill-pill">
+              {tech}
             </span>
           ))}
         </div>
