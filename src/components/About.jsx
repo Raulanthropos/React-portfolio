@@ -51,9 +51,9 @@ export default function About() {
               </p>
               <p>
                 I started on the MERN stack and have moved toward TypeScript-heavy
-                full-stack work and system integration — AWS, Kafka, Supabase,
+                full-stack work and system integration (AWS, Kafka, Supabase,
                 Vercel, Railway, CSV/Excel pipelines, and wiring external systems
-                together so data actually flows where it needs to go. I handle
+                together so data actually flows where it needs to go). I handle
                 multiple clients end to end, from architecture and implementation
                 through deployment.
               </p>

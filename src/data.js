@@ -33,7 +33,7 @@ export const projects = [
   //   title: "Joke Collection App",
   //   subtitle: "Vue js, Tailwind CSS",
   //   description:
-  //     "A Vue 3 app that lets users fetch, view, and manage their favorite jokes — with category switching, localStorage persistence, star ratings, filtering, sorting, and discreet punchline effects.",
+  //     "A Vue 3 app that lets users fetch, view, and manage their favorite jokes, with category switching, localStorage persistence, star ratings, filtering, sorting, and discreet punchline effects.",
   //   image:
   //     "https://res.cloudinary.com/dlhs6o8ga/image/upload/v1745081086/vue-jokes-app.png",
   //   github: "https://github.com/Raulanthropos/vue-jokes-app",

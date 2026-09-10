@@ -19,12 +19,18 @@ export default function Projects() {
         <div className="mb-16 text-center lg:text-left">
           <span className="section-label">Selected Work</span>
           <h2 className="section-title mb-4">Applications</h2>
-          <p className="section-subtitle mx-auto lg:mx-0">
-            A selection of applications built for real-world use — internal
-            management systems, data-processing utilities, and commercial
-            websites. Each project reflects an emphasis on correctness, clarity,
-            and long-term maintainability.
-          </p>
+          <div className="section-subtitle mx-auto lg:mx-0">
+            <p>A selection of applications built for real-world use:</p>
+            <ul className="list-disc list-inside mt-2 mb-3 space-y-1">
+              <li>Internal management systems</li>
+              <li>Data-processing utilities</li>
+              <li>Commercial websites</li>
+            </ul>
+            <p>
+              Each project reflects an emphasis on correctness, clarity, and
+              long-term maintainability.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
